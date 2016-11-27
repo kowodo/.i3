@@ -134,9 +134,9 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # move focused workspace to output (monitor)
-bindsym $mod+Shift+ctrl+j move workspace to output left
-bindsym $mod+Shift+ctrl+k move workspace to output down
-bindsym $mod+Shift+ctrl+l move workspace to output up
+bindsym $mod+Shift+ctrl+j         move workspace to output left
+bindsym $mod+Shift+ctrl+k         move workspace to output down
+bindsym $mod+Shift+ctrl+l         move workspace to output up
 bindsym $mod+Shift+ctrl+semicolon move workspace to output right
 
 

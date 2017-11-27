@@ -134,15 +134,15 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # move focused workspace to output (monitor)
+# source: https://faq.i3wm.org/question/591/move-workspace-to-other-monitor.1.html
 bindsym $mod+Shift+ctrl+j         move workspace to output left
 bindsym $mod+Shift+ctrl+k         move workspace to output down
 bindsym $mod+Shift+ctrl+l         move workspace to output up
 bindsym $mod+Shift+ctrl+semicolon move workspace to output right
 
-
+# setting fixed(initial) workspace for some applications
 assign [class="Firefox"] $workspace8
 assign [class="Emacs"] $workspace9
-
 
 
 
@@ -190,15 +190,17 @@ bar {
 #        statusline #000000
 #        separator #666666
 #			   border  backgr. text
-#        focused_workspace  #4c7899 #285577 #ffffff
-        focused_workspace  #333333 #dbdbdb #000000
+        focused_workspace  #4c7899 #285577 #ffffff
+#        focused_workspace  #333333 #dbdbdb #000000
 #        active_workspace   #333333 #5f676a #ffffff
 
 #        inactive_workspace #333333 #222222 #888888
 #        urgent_workspace   #2f343a #900000 #ffffff
 #        binding_mode       #2f343a #900000 #ffffff
-    }	
+    }
+
 }
+
 
 
 bindsym $mod+shift+x exec i3lock -c 000000
@@ -222,6 +224,20 @@ bindsym XF86TouchpadToggle exec ~/.i3/toggletouchpad.sh # toggle touchpad
 # Wifi
 exec --no-startup-id nm-applet
 
+
+# Screenshots
+# nastaveni defaultniho adresare https://askubuntu.com/questions/114429/default-save-directory-for-gnome-screenshot
+bindsym Print exec gnome-screenshot
+bindsym ctrl+Print exec gnome-screenshot --interactive
+bindsym Shift+Print exec  gnome-screenshot --window
+bindsym Shift+ctrl+Print exec gnome-screenshot --area -i
+#bindsym ctrl+Shift+Print exec gnome-screenshot --area -i
+
+# Enable or disable floating
+# source: https://gist.github.com/bcremer/7524492
+for_window [class="Gnome-screenshot"] floating enable
+
+
 # multiple keyboard layouts
 #ctrl:super
 #exec_always setxkbmap -layout us,cz -variant ,qwerty -option grp:alt_shift_toggle, altwin:ctrl_alt_win, caps:super
@@ -235,7 +251,12 @@ exec_always setxkbmap -layout us,cz -variant ,qwerty -option  grp:lctrl_lshift_t
 
 # setting wallpaper
 #exec_always feh --bg-scale Grass_by_Jeremy_Hill.jpg
-exec_always feh --bg-scale Blue-Planet-Earth-1600x900.jpg
+#exec_always feh --bg-scale Blue-Planet-Earth-1600x900.jpg
+#exec_always feh --bg-max van_gogh_potato_eaters.jpg
+#exec_always feh --bg-max Sussman_kintuskuroi_Drain.jpg
+exec_always feh --bg-max 787EF75B8-975x1024.jpg
+
+
 #exec_always feh --bg-scale-down see-yourself-as-a-gardener.png
 
 # starting programs at startup
@@ -250,7 +271,9 @@ exec_always --no-startup-id megasync
 
 # class                 border  backgr. text    indicator
 #client.focused          #4c7899 #285577 #ffffff #2e9ef4
-#client.focused           $Sandybrown $Sandybrown  #000000   $DeepSkyBlue	
+client.focused           $Sandybrown $Sandybrown  #000000   $DeepSkyBlue
+# trochu svetlejsi ramecek
+#client.focused          #4c7899 #4682b4 #ffffff #2e9ef4
 #client.focused_inactive #333333 #5f676a #ffffff #484e50
 #client.unfocused        #333333 #222222 #888888 #292d2e
 #client.unfocused        #8b4500 #8b4500 #Bebebe #292d2e

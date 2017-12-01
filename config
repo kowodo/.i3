@@ -271,7 +271,8 @@ exec_always --no-startup-id megasync
 
 # class                 border  backgr. text    indicator
 #client.focused          #4c7899 #285577 #ffffff #2e9ef4
-client.focused           $Sandybrown $Sandybrown  #000000   $DeepSkyBlue
+#client.focused           $Sandybrown $Sandybrown  #000000   $DeepSkyBlue
+client.focused		 #ffffff #ffffff #000000 #000000
 # trochu svetlejsi ramecek
 #client.focused          #4c7899 #4682b4 #ffffff #2e9ef4
 #client.focused_inactive #333333 #5f676a #ffffff #484e50

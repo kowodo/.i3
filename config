@@ -278,6 +278,7 @@ client.focused		 #ffffff #ffffff #000000 #000000
 #client.focused_inactive #333333 #5f676a #ffffff #484e50
 #client.unfocused        #333333 #222222 #888888 #292d2e
 #client.unfocused        #8b4500 #8b4500 #Bebebe #292d2e
+client.unfocused        #000000  #000000 #Bebebe #0000dd
 #client.urgent           #2f343a #900000 #ffffff #900000
 #client.placeholder      #000000 #0c0c0c #ffffff #000000
 
@@ -287,6 +288,8 @@ client.focused		 #ffffff #ffffff #000000 #000000
 
 
 #Border style
-new_window pixel 3
+new_window pixel 2
 #new_window normal
 default_orientation auto
+
+hide_edge_borders none

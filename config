@@ -183,7 +183,10 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3blocks -c ~/.i3/i3blocks.conf
+# defaultni
+        status_command i3status
+# toto neco potrebuje, nevim co
+#        status_command i3blocks -c ~/.i3/i3blocks.conf
     colors {
 #        background #000000
 
@@ -222,7 +225,7 @@ bindsym XF86TouchpadToggle exec ~/.i3/toggletouchpad.sh # toggle touchpad
 
 
 # Wifi
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 
 
 # Screenshots
@@ -254,7 +257,7 @@ exec_always setxkbmap -layout us,cz -variant ,qwerty -option  grp:lctrl_lshift_t
 #exec_always feh --bg-scale Blue-Planet-Earth-1600x900.jpg
 #exec_always feh --bg-max van_gogh_potato_eaters.jpg
 #exec_always feh --bg-max Sussman_kintuskuroi_Drain.jpg
-exec_always feh --bg-max 787EF75B8-975x1024.jpg
+#exec_always feh --bg-max 787EF75B8-975x1024.jpg
 
 
 #exec_always feh --bg-scale-down see-yourself-as-a-gardener.png
